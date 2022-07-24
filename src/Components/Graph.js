@@ -66,7 +66,8 @@ const Graph = ({ data }) => {
     };
   }, [data]);
 
-  return [<div id="chartdiv" style={{ width: "70%", height: "300px", }} />]
+  return [<div id="chartdiv" style={{ width: "70%", height: "300px", }} />,
+   <p style={{width: "50%", height: "00px", top: "-10px",right: "500px", position: "absolute"}}>Диаграмма зависимости года и продаж </p>]
 
 };
 

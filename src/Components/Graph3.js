@@ -91,6 +91,7 @@ series.appear(1000, 100);
     };
   }, [data]);
 
-  return <div id="chartdiv3" style={{ width: "80%", height: "400px", right: "20px", position: "absolute" }} />;
+  return [<div id="chartdiv3" style={{ width: "80%", height: "400px", right: "20px", position: "absolute" }} />,
+  <p style={{width: "50%", height: "0px", top: "700px",right: "-500px", position: "absolute"}}>Тип обслуживания</p>];
 };
 export default Graph3;

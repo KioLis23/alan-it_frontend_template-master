@@ -115,7 +115,8 @@ chart.appear(1000, 100);
     };
   }, [data]);
 
-  return <div id="chartdiv1" style={{width: "40%", height: "300px", top: "50px",right: "50px",position: "absolute"}} />;
+  return [<div id="chartdiv1" style={{width: "40%", height: "300px", top: "50px",right: "50px",position: "absolute"}} />,
+  <p style={{width: "50%", height: "00px", top: "20px",right: "-250px", position: "absolute"}}>Диаграмма зависимости менеджеров и продаж </p>];
 };
 
 export default Graph1;

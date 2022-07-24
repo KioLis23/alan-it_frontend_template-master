@@ -91,6 +91,7 @@ series.data.setAll(finalData);
     };
   }, [data]);
 
-  return <div id="chartdiv5" style={{width: "50%", height: "300px", top: "450px",right: "-110px", position: "absolute"}} />;
+  return [<div id="chartdiv5" style={{width: "50%", height: "300px", top: "450px",right: "-110px", position: "absolute"}} />,
+   <p style={{width: "50%", height: "0px", top: "290px",right: "-350px", position: "relative"}}>Диаграмма зависимости года и выручки </p>];
 };
 export default Graph3;

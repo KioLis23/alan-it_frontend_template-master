@@ -77,5 +77,6 @@ series.states.create("hidden", {
 series.data.setAll(finalData)
 series.appear(1000, 100);
 }, [data]);
-return [<div id="chartdiv2" style={{ width: "70%", height: "400px",right: "60px" }} />, <p>Я не работаю, помогите </p>]}
+return [<div id="chartdiv2" style={{ width: "70%", height: "400px",right: "60px" }} />,
+<p style={{width: "50%", height: "00px", top: "260px",right: "400px", position: "absolute"}}>Диаграмма продуктового сегмента</p>]}
 export default Graph2

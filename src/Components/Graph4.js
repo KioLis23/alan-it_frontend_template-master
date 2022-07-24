@@ -136,7 +136,8 @@ chart.appear(1000, 100);
 
   }, [data]);
 
-  return <div id="chartdiv4" style={{ width: "40%", height: "300px" }} />;
+  return [<div id="chartdiv4" style={{ width: "40%", height: "300px" }} />,
+  <p style={{width: "50%", height: "0px", top: "1000px",right: "650px", position: "absolute"}}>Диаграмма типа продукта и профита </p>];
 };
 
 export default Graph4;
