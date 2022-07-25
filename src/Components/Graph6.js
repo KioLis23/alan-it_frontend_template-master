@@ -207,7 +207,7 @@ chart.appear(1000, 100);
     };
   }, [data]);
 
-  return [<div id="chartdiv6" style={{width: "200%", height: "500px", top: "1300px",right: "-510px", position: "absolute"}} />,
+  return [<div id="chartdiv6" style={{width: "200%", height: "500px", top: "1500px",right: "-510px", position: "absolute"}} />,
   <p style={{width: "50%", height: "00px", top: "00px",right: "-950px", position: "relative"}}>Диаграмма зависимости области и продажи </p>];
 };
 

@@ -7,7 +7,11 @@ import Graph3 from "./Components/Graph3";
 import Graph4 from "./Components/Graph4";
 import Graph5 from "./Components/Graph5";
 import Graph6 from "./Components/Graph6";
-
+import Graph7 from "./Components/Graph7";
+import Graph8 from "./Components/Graph8";
+import Graph9 from "./Components/Graph9";
+import Graph10 from "./Components/Graph10";
+import Graph11 from "./Components/Graph11";
 
 const App = () => {
   const [data, setData] = useState([]);
@@ -25,6 +29,8 @@ const App = () => {
           console.log(result)
         });
       },[])
-return [<Graph data = {data}/>, <Graph1 data = {data}/>,<Graph2 data = {data}/>, <Graph3 data = {data}/>,<Graph4 data = {data}/>,<Graph5 data = {data}/>, <Graph6 data = {data}/>  ];
+return [<Graph data = {data}/>, <Graph1 data = {data}/>,<Graph2 data = {data}/>,
+ <Graph3 data = {data}/>,<Graph4 data = {data}/>,<Graph5 data = {data}/>, <Graph6 data = {data}/>,
+   <Graph7 data = {data}/>, <Graph8 data = {data}/>, <Graph9 data = {data}/>, <Graph10 data = {data}/>, <Graph11 data = {data}/>];
 }
 export default App;
