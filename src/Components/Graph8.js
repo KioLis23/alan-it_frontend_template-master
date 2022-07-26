@@ -74,30 +74,12 @@ var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
 
 // Create series
 // https://www.amcharts.com/docs/v5/charts/xy-chart/series/
-var series0 = chart.series.push(am5xy.LineSeries.new(root, {
-  calculateAggregates: true,
-  xAxis: xAxis,
-  yAxis: yAxis,
-  valueYField: "profit",
-  valueXField: "amount",
-  tooltip: am5.Tooltip.new(root, {
-    labelText: "Менеджер: {manager}, Профит: {profit}, Количество: {amount}"
-  })
-}));
+
 
 
 // Add bullet
 // https://www.amcharts.com/docs/v5/charts/xy-chart/series/#Bullets
-series0.bullets.push(function() {
-  var graphics = am5.Triangle.new(root, {
-    fill: series0.get("fill"),
-    width: 15,
-    height: 13
-  });
-  return am5.Bullet.new(root, {
-    sprite: graphics
-  });
-});
+
 
 
 // Create second series
@@ -113,7 +95,6 @@ var series1 = chart.series.push(am5xy.LineSeries.new(root, {
   })
 }));
 
-series0.strokes.template.set("strokeOpacity", 0);
 series1.strokes.template.set("strokeOpacity", 0);
 
 // Add bullet
@@ -131,32 +112,15 @@ series1.bullets.push(function() {
 });
 
 // trend series
-var trendSeries0 = chart.series.push(am5xy.LineSeries.new(root, {
-  xAxis: xAxis,
-  yAxis: yAxis,
-  valueYField: "profit",
-  valueXField: "amount",
-  stroke: series0.get("stroke")
-}));
 
-trendSeries0.data.setAll(finalData)
 
-var trendSeries1 = chart.series.push(am5xy.LineSeries.new(root, {
-  xAxis: xAxis,
-  yAxis: yAxis,
-  valueYField: "sales",
-  valueXField: "amount",
-  stroke: series1.get("stroke")
-}));
-
-trendSeries1.data.setAll(finalData)
 
 // Add cursor
 // https://www.amcharts.com/docs/v5/charts/xy-chart/cursor/
 chart.set("cursor", am5xy.XYCursor.new(root, {
   xAxis: xAxis,
   yAxis: yAxis,
-  snapToSeries: [series0, series1]
+  snapToSeries: [series1]
 }));
 
 // Add scrollbars
@@ -169,17 +133,13 @@ chart.set("scrollbarY", am5.Scrollbar.new(root, {
   orientation: "vertical"
 }));
 
-series0.data.setAll(finalData);
 series1.data.setAll(finalData);
 
 
 // Make stuff animate on load
 // https://www.amcharts.com/docs/v5/concepts/animations/
-series0.appear(1000);
 series1.appear(1000);
 
-trendSeries0.appear(1000);
-trendSeries1.appear(1000);
 
 chart.appear(1000, 100);
     chart.current = root;
